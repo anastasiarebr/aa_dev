@@ -1,14 +1,17 @@
 Первый этап
 ~~~~
-1 docker-compose build
-2 docker-compose up -d
+docker-compose build
+docker-compose up -d
 ~~~~
 
 После запуска docker
 ~~~~
 docker-compose run --rm workspace composer install
+
+docker-compose run --rm workspace mkdir -m777 backend/web/assets
+docker-compose run --rm workspace mkdir -m777 frontend/web/assets
+
 docker-compose run --rm workspace php init
-docker-compose run --rm yii migrate
 ~~~~
 
 URLs localhost
